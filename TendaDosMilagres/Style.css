@@ -8,42 +8,59 @@
 :root{
     --preto: #1b1c23;
     --branco: #ddd;
+    --margin: 20px;
+    --marginFinal: 11px;
 }
 
 html{
     background-color: var(--branco);
     overflow-x: hidden;
+    background-color: var(--preto);
 }
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 59px;
     flex-direction: column;
+    background-color: var(--branco);
 }
 
 .navBar{
     display: flex;
     position: fixed;
+    flex-direction: row;
+    align-items: center;
     top: 0;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    padding-left: 100px;
     color: var(--branco);
     background-color: var(--preto);
     border-bottom: #1b1c23 solid 2px;
+    border-bottom: var(--branco) solid 2px;
+    z-index: 1000;
+}
+
+.navBar img{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 2px;
 }
 
 .card{
     display: flex;
     background-color: var(--preto);
     color: var(--branco);
-    width: 60vw;
+    width: 50vw;
     height: auto;
     border-radius: 22px;
     padding: 22px;
     flex-direction: row;
-    margin-bottom: 11px;
+    margin-bottom: var(--margin);
 }
 
 .card img{
@@ -64,7 +81,7 @@ body{
 }
 
 .card .container p:not(:last-child){
-    margin-bottom: 10px;
+    margin-bottom: var(--margin);
 }
 
 .card .container span{
@@ -81,19 +98,20 @@ body{
     width: 100%;
     padding: 15px 25px;
     background-color: var(--preto);
-    margin-bottom: 11px;
+    margin-bottom: var(--margin);
 }
 
 .carrossel h1{
-    margin-bottom: 11px;
+    margin-bottom: var(--margin);
     color: var(--branco);
 }
 
 .carrossel .janela{
     display: flex;
     flex-direction: row;
-    width: 60vw;
+    width: 50vw;
     height: 200px;
+    overflow-x: hidden;
 }
 
 .carrossel .janela img{
@@ -108,8 +126,8 @@ body{
 .init{
     background-color: var(--preto);
     width: 100%;
-    height: 709px;
-    margin-bottom: 11px;
+    height: 100vh;
+    margin-bottom: var(--margin);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -125,12 +143,16 @@ body{
     font-size: 60px;
 }
 
-.init img{
-    width: 700px;
-    height: auto;
+.init img, .degrade{
+    width: 100vh;
+    height: 100vh;
     position: absolute;
     right: 0;
-    bottom: 0;
+}
+
+.degrade{
+    background-image: linear-gradient(to right, #1b1c23, rgb(0,0,0,0));
+    z-index: 100;
 }
 
 footer{
@@ -138,7 +160,6 @@ footer{
     justify-content: center;
     background-color: var(--preto);
     color: var(--branco);
-    margin-top: 11px;
-    width: 100%;
-    
+    margin-top: var(--marginFinal);
+    width: 100%; 
 }
