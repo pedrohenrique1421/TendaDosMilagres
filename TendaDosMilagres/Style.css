@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Qwitcher+Grypen:wght@700&display=swap');
+
+:root{
+    --preto: #1b1c23;
+    --branco: #ddd;
+}
+
+html{
+    background-color: var(--branco);
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 59px;
+    flex-direction: column;
+}
+
+.navBar{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    color: var(--branco);
+    background-color: var(--preto);
+    border-bottom: #1b1c23 solid 2px;
+}
+
+.card{
+    display: flex;
+    background-color: var(--preto);
+    color: var(--branco);
+    width: 60vw;
+    height: auto;
+    border-radius: 22px;
+    padding: 22px;
+    flex-direction: row;
+    margin-bottom: 11px;
+}
+
+.card img{
+    width: 250px;
+    height: 230px;
+    border: var(--branco) solid 4px;
+    margin-right: 10px;
+    border-radius: 22px;
+}
+
+.card p{
+    font-weight: 600;
+}
+
+.card .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card .container p:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.card .container span{
+    width: 100%;
+    text-align: end;
+    font-size: 12px;
+}
+
+.carrossel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px 25px;
+    background-color: var(--preto);
+    margin-bottom: 11px;
+}
+
+.carrossel h1{
+    margin-bottom: 11px;
+    color: var(--branco);
+}
+
+.carrossel .janela{
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    height: 200px;
+}
+
+.carrossel .janela img{
+    width: auto;
+    height: 200px;
+}
+
+.carrossel .janela img:not(:last-child){
+    margin-right: 20px;
+}
+
+.init{
+    background-color: var(--preto);
+    width: 100%;
+    height: 709px;
+    margin-bottom: 11px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 200px;
+    color: var(--branco);
+}
+
+.init h1{
+    font-size: 100px;
+}
+
+.init p{
+    font-size: 60px;
+}
+
+.init img{
+    width: 700px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--preto);
+    color: var(--branco);
+    margin-top: 11px;
+    width: 100%;
+    
+}
