@@ -17,8 +17,6 @@ setInterval(function(){
         impulso++;
     };
     carroselPrimeiro.style.marginLeft = impulso + "px";
-    console.log(sentido);
-    console.log(impulso)
 }, 50);
 
 

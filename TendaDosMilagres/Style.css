@@ -16,6 +16,7 @@ html{
     background-color: var(--branco);
     overflow-x: hidden;
     background-color: var(--preto);
+    width: 100%;
 }
 
 body{
@@ -24,6 +25,7 @@ body{
     align-items: center;
     flex-direction: column;
     background-color: var(--branco);
+    width: 100%;
 }
 
 .navBar{
@@ -58,17 +60,9 @@ body{
     width: 50vw;
     height: auto;
     border-radius: 22px;
-    padding: 22px;
+    padding: 5px;
     flex-direction: row;
     margin-bottom: var(--margin);
-}
-
-.card img{
-    width: 250px;
-    height: 230px;
-    border: var(--branco) solid 4px;
-    margin-right: 10px;
-    border-radius: 22px;
 }
 
 .card p{
@@ -162,4 +156,49 @@ footer{
     color: var(--branco);
     margin-top: var(--marginFinal);
     width: 100%; 
+}
+
+@media (max-width: 450px){
+
+    .navBar{
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        padding-left: 100px;
+        font-size: 14px;
+    }
+
+    .init{
+        background-color: transparent;
+        height: 500px;
+        width: auto;
+        margin-bottom: var(--margin);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .init img{
+        width: 100%;
+        height: auto;
+    }
+
+    .init p, .init h1{
+        font-size: 0;
+    }
+
+    .degrade{
+        width: 0;
+        height: 0;
+    }
+
+    .card{
+        width: 80vw;
+        height: auto;
+        padding: 22px;
+    }
+
+    .carrossel{
+        padding: 15px 0;
+    }
 }
